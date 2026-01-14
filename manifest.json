@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Túlkr",
+  "version": "0.1",
+  "description": "Showing custom subtitles",
+  "action": {
+    "default_title": "Túlkr",
+    "default_popup": "popup/popup.html",
+    "default_icon": "assets/logo.png"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "tulkr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": {
+    "name": "SanjayKumar Kumaravelan",
+    "email": "sanjaykumarkumaravelan@gmail.com",
+    "url": "https://www.github.com/hashedalgorithm"
+  },
+  "contributors": [],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile": "yarn tsc",
+    "copy": "rsync -av --exclude 'tsconfig.json' --exclude 'src' --exclude 'dist' ./ dist/",
+    "build": "yarn clean; yarn compile; yarn copy"
+  },
+  "dependencies": {
+    "@types/chrome": "^0.1.33"
+  },
+  "devDependencies": {}
+}
