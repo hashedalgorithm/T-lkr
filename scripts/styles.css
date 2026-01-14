@@ -1,0 +1,26 @@
+.TULKR_container {
+  position: fixed;
+  bottom: 1em;
+  width: 100dvw;
+  border: 0.25em;
+  border-color: red;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999;
+  user-select: none;
+  pointer-events: none;
+}
+
+.TULKR_text {
+  opacity: 0.15;
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: "0 0 5px #000";
+  user-select: none;
+  pointer-events: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  mix-blend-mode: difference;
+}
