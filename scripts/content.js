@@ -6,6 +6,20 @@ subtitleText.classList.add("TULKR_text");
 
 subtitleContainer.appendChild(subtitleText);
 
-subtitleText.innerText = "HELLO this is my sample subtitle!";
+subtitleText.innerText = "Press play to start playing subs";
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  switch (message.type) {
+    case "playing-subtitle": {
+      subtitleText.innerText =
+        message?.payload?.text ?? "Something wrong in parsing subtitle";
+      console.log("Received from popup:", message.payload);
+      break;
+    }
+    default:
+      console.log("Invalid payload!");
+      break;
+  }
+});
 
 document.body.append(subtitleContainer);

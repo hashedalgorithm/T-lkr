@@ -1,9 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body>
-    Hello world!
-    <div class="container">Hello</div>
+  <head>
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+  </head>
+  <body class="body">
+    <div class="header">
+      <div class="header_logo_container">
+        <img
+          class="header_logo"
+          src="https://unpkg.com/lucide-static@latest/icons/closed-caption.svg"
+        />
+
+        <h3 class="header_title">T&uacute;lkr</h3>
+      </div>
+      <p class="header_description">
+        Upload .srt subtitle files to enhance your viewing experience across
+        different websites.
+      </p>
+      <hr class="header_divider" />
+    </div>
+
+    <div class="panel">
+      <div class="text_with_icon">
+        <img
+          class="icon"
+          src="https://unpkg.com/lucide-static@latest/icons/file-cog.svg"
+        />
+        <h4>Subtitle Controls</h4>
+      </div>
+
+      <label class="file-upload">
+        <div class="text_with_icon">
+          <img
+            class="icon"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmY2ZWUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jbG91ZC11cGxvYWQtaWNvbiBsdWNpZGUtY2xvdWQtdXBsb2FkIj48cGF0aCBkPSJNMTIgMTN2OCIvPjxwYXRoIGQ9Ik00IDE0Ljg5OUE3IDcgMCAxIDEgMTUuNzEgOGgxLjc5YTQuNSA0LjUgMCAwIDEgMi41IDguMjQyIi8+PHBhdGggZD0ibTggMTcgNC00IDQgNCIvPjwvc3ZnPg=="
+          />
+          <p>
+            Upload Subtitles
+          </p>
+        </div>
+        <input id="TULKR_fileInput" type="file" accept=".srt" hidden />
+      </label>
+
+      <button id="TULKR_playbutton" class="primary text_with_icon">
+        <img
+          class="icon"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlZmY2ZWUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1saXN0LXZpZGVvLWljb24gbHVjaWRlLWxpc3QtdmlkZW8iPjxwYXRoIGQ9Ik0yMSA1SDMiLz48cGF0aCBkPSJNMTAgMTJIMyIvPjxwYXRoIGQ9Ik0xMCAxOUgzIi8+PHBhdGggZD0iTTE1IDEyLjAwM2ExIDEgMCAwIDEgMS41MTctLjg1OWw0Ljk5NyAyLjk5N2ExIDEgMCAwIDEgMCAxLjcxOGwtNC45OTcgMi45OTdhMSAxIDAgMCAxLTEuNTE3LS44NnoiLz48L3N2Zz4="
+        />
+        Play
+      </button>
+    
+      <!-- 
+      <div class="row">
+        <button class="primary">⚙ Settings</button>
+        <button class="danger" id="clearBtn">🗑 Clear</button>
+      </div>
+
+      <label>Font Size: 16px</label>
+      <input type="range" min="12" max="32" value="16" />
+
+      <p style="opacity: 0.5; font-size: 12px">
+        Upload .srt or .vtt subtitle files
+      </p>
+    </div> -->
+
+    
     <script src="popup.js"></script>
-    <script src="popup.css"></script>
   </body>
 </html>
